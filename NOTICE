@@ -1,0 +1,4 @@
+FeatureGraft includes Git snapshot mechanics adapted from Unmix (MIT),
+developed by light338 and Unmix contributors in 2026.
+The source feature's own LICENSE is retained in every finished graft candidate.
+React, TypeScript, the MCP SDK and other dependencies retain their own licenses.
