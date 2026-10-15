@@ -1,0 +1,37 @@
+name: Feature transplant trial
+description: Report a real attempt to transplant a feature and carry an upstream fix.
+title: "[Trial] "
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source feature and receiving project
+      description: Entry point, source license, target stack and data model. Public source links are helpful; private code is not required.
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Behavior and checks registered before adaptation
+      description: What should survive? What target-specific behavior should be preserved?
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Actual outcome
+      options:
+        - Transplant and upstream update worked
+        - Transplant worked; upstream update not tried
+        - Required additional manual repairs
+        - Lost a retained behavior
+        - Could not finish setup or extraction
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Evidence, friction and repeat use
+      description: What passed or failed? Would you use it again? Include sanitized results, not secrets.
+    validations:
+      required: true
