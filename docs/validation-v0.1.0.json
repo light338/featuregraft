@@ -1,0 +1,165 @@
+{
+  "liveAgent": true,
+  "prewrittenTargetAdapters": false,
+  "verificationRuntime": "jsdom",
+  "scenario": "One React/TypeScript feature transplant and authored upstream fix",
+  "originalTargetUnchanged": true,
+  "sourceUnchangedDuringEachAdaptation": true,
+  "contractUnchanged": true,
+  "sourceEntry": "src/features/ProjectTable.tsx",
+  "sourceClosure": [
+    "src/features/ProjectTable.tsx",
+    "src/features/logic.ts",
+    "src/features/table.css"
+  ],
+  "dependencies": {
+    "react": "19.3.0"
+  },
+  "transplant": {
+    "planId": "graft-405ab37b",
+    "candidate": "<DEMO_ROOT>/target-graft-405ab37b",
+    "verification": {
+      "passed": true,
+      "tree": "6b8b8f15e59affc06a147d29335c063032bbf391",
+      "changedDuringChecks": false,
+      "integrityError": null,
+      "results": [
+        {
+          "command": [
+            "node",
+            "--experimental-strip-types",
+            "--test",
+            "test/baseline.test.mjs"
+          ],
+          "ok": true,
+          "code": 0,
+          "stdout": "✔ existing studio data, brand and portfolio calculation survive (0.347125ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 60.759166\n",
+          "stderr": "",
+          "error": null
+        },
+        {
+          "command": [
+            "node",
+            "<FEATUREGRAFT_ROOT>/examples/dom-contract.mjs",
+            "target"
+          ],
+          "ok": true,
+          "code": 0,
+          "stdout": "{\"passed\":true,\"runtime\":\"jsdom\",\"kind\":\"target\",\"upstream\":false,\"scenarios\":[\"build-and-typecheck\",\"existing-data\",\"target-brand-and-total\",\"sort\",\"combined-filter\",\"empty-results\",\"unicode\",\"accent-search\",\"filtered-csv-escaping\"]}\n",
+          "stderr": "",
+          "error": null
+        }
+      ],
+      "at": "2026-10-14T11:50:55.121Z",
+      "scope": "Registered behavior only; frozen listed contracts and existing target tests. Not proof of semantic equivalence."
+    }
+  },
+  "update": {
+    "planId": "graft-227ef1ee",
+    "candidate": "<DEMO_ROOT>/target-graft-227ef1ee",
+    "verification": {
+      "passed": true,
+      "tree": "b9d0f7f5f0c00b565c28b2b96bbe2610f0b92a6d",
+      "changedDuringChecks": false,
+      "integrityError": null,
+      "results": [
+        {
+          "command": [
+            "node",
+            "--experimental-strip-types",
+            "--test",
+            "test/baseline.test.mjs"
+          ],
+          "ok": true,
+          "code": 0,
+          "stdout": "✔ existing studio data, brand and portfolio calculation survive (0.284625ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 59.359958\n",
+          "stderr": "",
+          "error": null
+        },
+        {
+          "command": [
+            "node",
+            "<FEATUREGRAFT_ROOT>/examples/dom-contract.mjs",
+            "target",
+            "--upstream"
+          ],
+          "ok": true,
+          "code": 0,
+          "stdout": "{\"passed\":true,\"runtime\":\"jsdom\",\"kind\":\"target\",\"upstream\":true,\"scenarios\":[\"build-and-typecheck\",\"existing-data\",\"target-brand-and-total\",\"sort\",\"combined-filter\",\"empty-results\",\"unicode\",\"accent-search\",\"filtered-csv-escaping\"]}\n",
+          "stderr": "",
+          "error": null
+        }
+      ],
+      "at": "2026-10-14T11:52:08.230Z",
+      "scope": "Registered behavior only; frozen listed contracts and existing target tests. Not proof of semantic equivalence."
+    }
+  },
+  "mcpCalls": [
+    "graft_inspect_source",
+    "graft_prepare",
+    "graft_prompt",
+    "graft_finish",
+    "graft_verify",
+    "graft_inspect",
+    "graft_finish",
+    "graft_verify",
+    "graft_finish",
+    "graft_verify",
+    "graft_inspect",
+    "graft_updates",
+    "graft_prepare_update",
+    "graft_prompt",
+    "graft_finish",
+    "graft_verify",
+    "graft_inspect"
+  ],
+  "scope": "Controlled local fixtures, not independently selected projects or external adoption.",
+  "finalReverification": {
+    "passed": true,
+    "tree": "b9d0f7f5f0c00b565c28b2b96bbe2610f0b92a6d",
+    "changedDuringChecks": false,
+    "integrityError": null,
+    "results": [
+      {
+        "command": [
+          "node",
+          "--experimental-strip-types",
+          "--test",
+          "test/baseline.test.mjs"
+        ],
+        "ok": true,
+        "code": 0,
+        "stdout": "✔ existing studio data, brand and portfolio calculation survive (0.293542ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 59.573583\n",
+        "stderr": "",
+        "error": null
+      },
+      {
+        "command": [
+          "node",
+          "<FEATUREGRAFT_ROOT>/examples/dom-contract.mjs",
+          "target",
+          "--upstream"
+        ],
+        "ok": true,
+        "code": 0,
+        "stdout": "{\"passed\":true,\"runtime\":\"jsdom\",\"kind\":\"target\",\"upstream\":true,\"scenarios\":[\"build-and-typecheck\",\"existing-data\",\"target-brand-and-total\",\"sort\",\"combined-filter\",\"empty-results\",\"unicode\",\"accent-search\",\"filtered-csv-escaping\"]}\n",
+        "stderr": "",
+        "error": null
+      }
+    ],
+    "at": "2026-10-14T12:08:51.877Z",
+    "scope": "Registered behavior only; frozen listed contracts and existing target tests. Not proof of semantic equivalence."
+  },
+  "offlineTests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "manualBrowser": {
+    "runtime": "Codex in-app browser",
+    "accentSearch": true,
+    "statusFilter": true,
+    "ascendingAndDescendingSort": true,
+    "realCsvDownload": true,
+    "csvEscaping": true
+  }
+}
